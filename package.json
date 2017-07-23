@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "",
+  "repository": "https://github.com/doncolio007/taggeris-accounting.git",
   "keywords": [
     "Taggeris",
     "quick",
@@ -16,7 +16,7 @@
     "Money"
   ],
   "author": "Festus Adeboye",
-  "license": "",
+  "license": "Apache-2.0",
   "devDependencies": {
     "electron": "~1.6.2"
   }
