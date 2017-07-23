@@ -1,0 +1,23 @@
+{
+  "name": "taggeris-accounting",
+  "version": "1.0.0",
+  "description": "An accounting software for accountants and business managers.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "Taggeris",
+    "quick",
+    "Accounting",
+    "Bookkeeping",
+    "Balance",
+    "Money"
+  ],
+  "author": "Festus Adeboye",
+  "license": "",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}
