@@ -17,9 +17,9 @@ var url = "mongodb://localhost:27017/taggeris";
 // createTable(table, MongoClient, url);
 
 
-// var myobj = [
-// { "acc_name" : "Cash(Hand)", "acc_num" : "1000", "Financial": "Balance Sheet", "Group" : "Asset", "Sub_Group": "Current Asset" },
-// { "acc_name" : "Cash(Bank)", "acc_num" : "1100", "Financial": "Balance Sheet", "Group" : "Asset", "Sub_Group": "Current Asset" },
+var myobj = [
+{ "acc_name" : "Cash(Hand)", "acc_num" : "1000", "debit": "", "credit" : 25000, "date": "13-08-17" },
+  { "acc_name": "Rent", "acc_num": "6000", "debit": 25000, "credit": "", "date": "13-08-17" }];
 // { "acc_name" : "Sales", "acc_num" : "4000", "Financial": "Profit or Loss", "Group" : "Income", "Sub_Group": "Sales and Inventory" },
 // { "acc_name" : "Purchases", "acc_num" : "5000", "Financial": "Balance Sheet", "Group" : "Current Asset", "Sub_Group": "COGS" },
 // { "acc_name" : "Rent", "acc_num" : "6000", "Financial": "Profit or Loss", "Group" : "Expense", "Sub_Group": "Rents and Office Expense" },
@@ -29,7 +29,7 @@ var url = "mongodb://localhost:27017/taggeris";
 // { "acc_name" : "Salary", "acc_num" : "6100", "Financial": "Balace Sheet", "Group" : "Current Asset", "Sub_Group": "Salary and Admin Expense" }];
 
 
-// insertMany(MongoClient, url, table, myobj);
+insertMany(MongoClient, url, table, myobj);
 
 
 // Create table
