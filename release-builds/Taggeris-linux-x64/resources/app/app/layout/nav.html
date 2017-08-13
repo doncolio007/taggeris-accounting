@@ -1,0 +1,47 @@
+<nav class="nav-group">
+  <h4 class="nav-group-title"><b>Menu</b></h4>
+  <span class="nav-group-item">
+    <span class="icon icon-home"></span>
+    <a href="./dashboard.html">Dashboard</a>
+  </span>
+  <span class="nav-group-item">
+  <span class="icon icon-book"></span>
+    <a href="./ledger.html">General Ledger</a>
+  </span>
+  <span class="nav-group-item">
+    <span class="icon icon-archive"></span>
+    <a href="./journals.html">Journals</a>
+  </span>
+  <span class="nav-group-item">
+    <span class="icon icon-bag"></span>
+    <a href="./customers.html">Customers</a>
+  </span>
+  <span class="nav-group-item">
+    <span class="icon icon-user"></span>
+    <a href="./hr.html">Human Resource</a>
+  </span>
+  <span class="nav-group-item">
+    <span class="icon icon-switch"></span>
+    <a href="./cashflow.html">Cash Flow</a>
+  </span>
+  <span class="nav-group-item">
+    <span class="icon icon-folder"></span>
+    <a href="./cofa.html">Chart of Accounts</a>
+  </span>
+  <span class="nav-group-item">
+    <span class="icon icon-clipboard"></span>
+    <a href="./reports.html">Reports</a>
+  </span>
+  <hr>
+  <h4 class="nav-group-title"><b>Favorites <span class="icon icon-flag"></span></b> <span ng-click="insertFav(selectedFav)"><button type="button" name="button" class="btn btn-sm right" ng-mouseover="showOf()"> <span class="icon icon-plus"></span></button></span></h4>
+  <span class="nav-group-item" ng-show="showFav">
+    <select ng-model="selectedFav" ng-options="x for x in favorites"></select>
+  </span>
+
+  <span class="nav-group-item" ng-repeat="x in tagFavorite track by $index" ng-mouseover="close()" ng-mouseleave="rClose()">
+    <span class="icon icon-doc-text"></span>
+    <a href="./{{x | lowercase}}.html">{{x}}</a>
+    <span class="icon icon-cancel icon-close-tab pull-right" ng-click="removeItem(tagFavorite[$index])" ng-show="showCls"></span>
+  </span>
+
+</nav>

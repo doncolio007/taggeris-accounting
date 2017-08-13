@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ABC Company LTD</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./assets/css/custom.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/photon.min.css">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <script src="../node_modules/angular/angular.js"></script>
+
+    <script src="../node_modules/moment/moment.js"></script>
+
+    <script src="./renderer.js"></script>
+
+    <!-- Javascript -->
+    <script src="./assets/js/menu.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="window" ng-app="taggeris" ng-controller="tagController">
+
+      <!-- .toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header" ng-include="head.url">
+
+      </header>
+
+    <div class="tab-group">
+
+    <div class="tab-item active">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      Dashboard
+    </div>
+    <div class="tab-item">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      Human Resource
+    </div>
+    <div class="tab-item">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      General Journal
+    </div>
+    <div class="tab-item">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      Customers
+    </div>
+    <div class="tab-item">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      Cash Account(Hand)
+    </div>
+  </div>
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+
+          <div class="pane pane-sm sidebar" ng-mouseleave="closeFav()" ng-include="nav.url">
+
+          </div>
+
+          <div class="pane">
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+  <div class="toolbar-actions">
+    <button class="btn btn-default">
+      Cancel
+    </button>
+
+    <button class="btn btn-primary pull-right">
+      Save
+    </button>
+  </div>
+</footer>
+
+<script src="./angularjs/ang_nav.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+
+<script src="./vendor/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    </div>
+  </body>
+</html>

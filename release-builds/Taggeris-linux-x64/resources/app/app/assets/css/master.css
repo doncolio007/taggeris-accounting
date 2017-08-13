@@ -1,0 +1,12 @@
+body{
+  font-size: 14px;
+  font-style: normal;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}

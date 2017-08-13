@@ -1,0 +1,58 @@
+body{
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: lightblue;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+}
+h1{
+  color: white;
+  position: relative;
+  align-self: center;
+  font-weight: bold;
+}
+
+.window{
+  background-color: #F7F7F7;
+}
+
+.mid{
+  text-align: center;
+  padding: 100px 70px 0 70px;
+  max-height: 55%;
+}
+.main{
+  background-color: #1ABC9C;
+  border: 15px solid white;
+  border-radius: 15px;
+  opacity: 0.8;
+  padding:20px 40px;
+  -webkit-box-shadow: -9px 9px 45px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: -9px 9px 45px -12px rgba(0,0,0,0.75);
+box-shadow: -9px 9px 45px -12px rgba(0,0,0,0.75);
+}
+.logo{
+  width:12%;
+}
+.mt{
+  padding-left: 32%;
+}
+.note{
+  width:35%;
+}
+.line hr{
+  position: relative;
+  width: 65%;
+}
+#moto{
+  color:#FFC300;
+  background-color: black;
+  width:50%;
+  position: relative;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  opacity: 0.4;
+  z-index: 10;
+}

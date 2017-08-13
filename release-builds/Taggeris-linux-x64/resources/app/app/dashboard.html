@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id="page-title">ABC Company PLC</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/photon.min.css">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Javascript -->
+
+    <script src="./assets/js/menu.js" charset="utf-8"></script>
+
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+
+    <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+
+    <script src="../node_modules/moment/moment.js"></script>
+  </head>
+  <body>
+    <div class="window" ng-app="taggeris" ng-controller="tagController">
+      <!-- .toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header">
+          <h1 class="title"> Dashboard </h1>
+          <span ng-include="head.url"></span>
+      </header>
+
+  <div class="tab-group">
+  <div class="tab-item active">
+    <span class="icon icon-cancel icon-close-tab"></span>
+    Dashboard
+  </div>
+  <div class="tab-item">
+    <span class="icon icon-cancel icon-close-tab"></span>
+    Human Resource
+  </div>
+  <div class="tab-item">
+    <span class="icon icon-cancel icon-close-tab"></span>
+    General Journal
+  </div>
+  <div class="tab-item">
+    <span class="icon icon-cancel icon-close-tab"></span>
+    Customers
+  </div>
+  <div class="tab-item">
+    <span class="icon icon-cancel icon-close-tab"></span>
+    Cash Account(Hand)
+  </div>
+  <div class="tab-item">
+    <span class="icon icon-cancel icon-close-tab"></span>
+    Chart of Accounts
+  </div>
+  <div class="tab-item">
+    <span class="icon icon-cancel icon-close-tab"></span>
+    Reports
+  </div>
+</div>
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pane-sm sidebar" ng-mouseleave="closeFav()" ng-include="nav.url">
+
+          </div>
+
+
+
+          <div class="pane">
+            <div class="container m-c">
+              <div class="row">
+
+                <div class="clear-fix"></div>
+
+                <div class="col-md-12">
+                  <div class="row top_tiles">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <!-- <div class="icon"></div> -->
+                  <div class="count"><span id="sales-amount"></span> <span class="icon icon-chart-area"></span></div>
+                  <h3>Sales</h3>
+                  <p class="alert alert-info">5% Increase</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <!-- <div class="icon"></div> -->
+                  <div class="count">{{ 149000.05 | currency : "$" : 2}} <span class="icon icon-lg icon-gauge"></span></div>
+                  <h3>Expenses</h3>
+                  <p class="alert alert-danger">3% Decrease</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <!-- <div class="icon"></div> -->
+                  <div class="count"><span id="cash-bal"></span> <span class="icon icon-chart-pie"></span></div>
+                  <h3>Cash(Hand)</h3>
+                  <p class="alert alert-success">$4,000 Increase</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <!-- <div class="icon"></div> -->
+                  <div class="count"><span id="bank-bal"></span> <span class="icon icon-credit-card"></span></div>
+                  <h3>Cash(Bank)</h3>
+                  <p class="alert alert-warning">$2,300 Decrease</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+                <section>
+                  <div class="container m-c">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="row top_tiles fliper">
+                    <div class="animated flipInY col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                      <div class="tile-static">
+                        <div class="chart-container" style="height:8vh; width:15vw">
+                        <canvas id="myChart" width="140" height="140"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="animated flipInY col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                      <div class="tile-static">
+                        <div class="chart-container" style="height:8vh; width:15vw">
+                        <canvas id="canvas" width="180" height="160"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="animated flipInY col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                      <div class="tile-static">
+                        <div class="chart-container" style="height:8vh; width:15vw">
+                        <canvas id="pie-chart" width="160" height="160"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+                <div class="container m-c">
+                  <div class="clear-fix"></div>
+                </div>
+
+
+                <section>
+                  <div class="container m-c">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="chart-container" style="height:30vh; width:70vw">
+                        <canvas id="bar-chart" width="800" height="450"></canvas>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </section>
+
+                <!-- Chart module -->
+            <script src="./assets/js/chart_module.js"></script>
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+        <h1 class="title">Copyright &copy; Taggeris Accounting <script> document.write(new Date().getFullYear())</script></h1>
+      </footer>
+
+    
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="./renderer.js"></script>
+    <script src="./dbase/db.js"></script>
+    <script src="./dbase/dash.js"></script>
+    <script src="./angularjs/ang_module.js"></script>
+    <script src="./angularjs/ang_controller.js"></script>
+
+
+    <!-- <script src="./vendor/jquery/dist/jquery.js"></script> -->
+    <!-- <script src="../node_modules/jquery/dist/jquery.js"></script> -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+
+    </div>   <!--End of Window  -->
+  </body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Welcome| Taggeris Accounting version 1.0</title>
+   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/photon.min.css">
+  <link rel="stylesheet" href="./assets/css/master.css">
+  <link rel="stylesheet" href="./assets/css/loading.css">
+ <!--  <link href="./assets/fonts/Lato/Lato-Regular.ttf" rel="stylesheet">
+  <link href="./assets/fonts/Roboto/Roboto-Regular.ttf" rel="stylesheet"> -->
+   <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom panel panel-default">
+  <!-- <h1><a href="./index.html">Taggeris accounting</a></h1> -->
+  <div class="" id="view">
+
+  </div>
+<div class="logo">
+  <a href="./index.html"><img src="./assets/image/logo.png" alt="Logo"><h1>Taggeris Accounting</h1></a>
+  
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-offset-6 login">
+          <form class="left-pull" action="./dashboard.html">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="username" type="text" class="form-control" name="username" placeholder="Username">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+              <br>
+              <div class="form-group">
+              <div class="col-sm-12">
+                <button type="submit" class="btn btn-default">Login</button>
+              </div>
+            </div>
+        </form>
+        <br>
+        <div class="lnk">
+          <div class="link">
+            <a href="./register.html">New user, Register account</a>
+          </div>
+          <div class="right">
+            <a href="./register.html">Forgot password?</a>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  var myVar;
+
+  function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+</script>
+
+<script>
+require('./renderer.js');
+  require('./loaded.js');
+</script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<div class="toolbar-actions">
+<div class="btn-group">
+  <a href="./dashboard.html" class="btn btn-default">
+    <span class="icon icon-home"></span>
+  </button>
+  <a href="./documents.html" class="btn btn-default">
+    <span class="icon icon-folder"></span>
+  </a>
+
+
+    <a href="./cloud.html" class="btn btn-default" >
+      <span class="icon icon-cloud"></span>
+    </a>
+
+  <button class="btn btn-default btn-dropdown" ng-click="custMenu()" id="customer">
+    <span class="icon icon-bag"></span>
+  </button>
+
+  <button class="btn btn-default btn-dropdown" ng-click="supMenu()">
+    <span class="icon icon-popup"></span>
+  </button>
+
+  <button class="btn btn-default btn-dropdown" ng-click="accMenu()">
+    <span class="icon icon-book"></span>
+  </button>
+
+  <button class="btn btn-default btn-dropdown" ng-click="hrMenu()">
+    <span class="icon icon-user"></span>
+  </button>
+
+  <a href="" class="btn btn-default btn-dropdown" ng-click="setMenu()">
+    <span class="icon icon-cog"></span>
+  </a>
+</div>
+
+<a href="./trial_balance.html" class="btn btn-default">
+<span class="icon icon-home icon-text"></span>
+Reports
+</a>
+
+<div class="pull-right">
+<button class="btn btn-default btn-dropdown" ng-click="uMenu()">
+   <span id="userName">{{userName}}</span><span class="icon icon-logout"></span>
+</button>
+</div>
+
+<div class="btn-group pull-right">
+<button onclick="openWindow('invoice_new')" class="btn btn-primary">
+Invoice <span class="icon icon-plus"></span>
+</button>
+<button onclick="openWindow('customer_new')" class="btn btn-success">
+Customer <span class="icon icon-plus"></span>
+</button>
+<button onclick="openWindow('expense_new')" class="btn btn-warning">
+Expense <span class="icon icon-plus"></span>
+</button>
+<button onclick="openWindow('inventory_new')" class="btn btn-default">
+Inventory <span class="icon icon-plus"></span>
+</button>
+</div>
+</div>
+
+<div class="btn-group" ng-show="customerMenu">
+<a href="./customer_new.html" class="btn btn-default">
+Add <span class="icon icon-bag"></span>
+</a>
+<a href="./customers.html" class="btn btn-default">
+Customers
+</a>
+<a href="./invoice_new.html" class="btn btn-default">
+Invoice
+</a>
+</div>
+
+<div class="btn-group" ng-show="supplierMenu">
+  <a href="./customer_new.html" class="btn btn-default">
+  Add <span class="icon icon-vcard"></span>
+  </a>
+  <a href="./suppliers.html" class="btn btn-default">
+  Suppliers
+  </a>
+  <a href="./inventory.html" class="btn btn-default">
+  Inventory
+  </a>
+  <a href="./inventory_new.html" class="btn btn-default">
+  Add <span class="icon icon-cup"></span>
+  </a>
+</div>
+
+<div class="btn-group" ng-show="accountMenu">
+<a href="./account_new.html" class="btn btn-default">
+Add <span class="icon icon-doc-text-inv"></span>
+</a>
+<a href="./ledger.html" class="btn btn-default">
+Accounts
+</a>
+<a href="./journal.html" class="btn btn-default">
+Journal
+</a>
+<a href="./expense_new.html" class="btn btn-default">
+New expense
+</a>
+<a href="./bank.html" class="btn btn-default">
+Bank
+</a>
+</div>
+
+<div class="btn-group" ng-show="humResMenu">
+<a href="./hr_new.html" class="btn btn-default">
+Add <span class="icon icon-user"></span>
+</a>
+<a href="./hr.html" class="btn btn-default">
+Staff
+</a>
+<a href="./payroll.html" class="btn btn-default">
+Payroll
+</a>
+</div>
+
+<div class="btn-group" ng-show="settingMenu">
+<a href="./company_new.html" class="btn btn-default">
+Add company
+</a>
+<a href="./setting.html" class="btn btn-default">
+Settings
+</a>
+<a href="./preferences.html" class="btn btn-default">
+Preferences
+</a>
+<a href="./fold_company.html" class="btn btn-danger">
+Fold company
+</a>
+</div>
+
+<div class="btn-group pull-right" ng-show="userMenu">
+<a href="./profile.html" class="btn btn-default">
+Profile
+</a>
+<a href="./customers.html" class="btn btn-default">
+To-do
+</a>
+<a href="./loading.html" class="btn btn-default">
+<span class="icon icon-logout"></span> Exit
+</a>
+</div>

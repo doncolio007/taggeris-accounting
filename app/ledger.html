@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ABC Company LTD</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./assets/css/custom.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/photon.min.css">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <script src="../node_modules/angular/angular.js"></script>
+
+    <script src="../node_modules/moment/moment.js"></script>
+
+
+
+    <!-- Javascript -->
+    <script src="./assets/js/menu.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="window" ng-app="taggeris" ng-controller="tagController">
+
+      <!-- .toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header">
+        <h1 class="title">General Ledger</h1>
+        <span ng-include="head.url"></span>
+      </header>
+
+    <div class="tab-group">
+
+      <div class="tab-item">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        Dashboard
+      </div>
+      <div class="tab-item">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        Human Resource
+      </div>
+      <div class="tab-item">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        General Journal
+      </div>
+      <div class="tab-item active">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        General Ledger
+      </div>
+      <div class="tab-item">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        Customers
+      </div>
+      <div class="tab-item">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        Chart of Accounts
+      </div>
+      <div class="tab-item">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        Reports
+      </div>
+  </div>
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+
+          <div class="pane pane-sm sidebar" ng-mouseleave="closeFav()" ng-include="nav.url">
+
+          </div>
+
+          <div class="pane">
+
+             <div class="">
+               <table class="table-striped">
+                 <thead>
+                   <tr>
+                     <th><b>Account #</b></th>
+                     <th><b>Description</b></th>
+                     <th><b>Type</b></th>
+                     <th><b>Balance</b></th>
+                     <th><span class="icon icon-menu"></span></th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td><b>Balance Sheet Accounts</b></td>
+                   </tr>
+                   <tr>
+                     <td>1000</td>
+                     <td>Computers and Software</td>
+                     <td>Asset</td>
+                     <td>$250</td>
+                   </tr>
+                   <tr>
+                     <td>2000</td>
+                     <td>Managers Loan to business</td>
+                     <td>Liability</td>
+                     <td>$1200</td>
+                   </tr>
+                   <tr>
+                     <td>1400</td>
+                     <td>Cash in Bank</td>
+                     <td>Asset</td>
+                     <td>$4500</td>
+                      <td><a href="./bank.html" class="btn btn-xs btn-primary">view</a></td>
+                   <tr>
+                     <td>1500</td>
+                     <td>Cash in Hand</td>
+                     <td>Asset</td>
+                     <td>$0</td>
+                     <td><a href="./cash.html" class="btn btn-xs btn-primary">view</a></td>
+                   </tr>
+                   <tr>
+                     <td>3000</td>
+                     <td>Owners Equity</td>
+                     <td>Equity</td>
+                     <td>$4850</td>
+                   </tr>
+                   <tr>
+                     <td>1100</td>
+                     <td>Office Furnitures</td>
+                     <td>Asset</td>
+                     <td>$1300</td>
+                   </tr>
+                   <tr>
+                     <td>1800</td>
+                     <td>Account Receivables</td>
+                     <td>Asset</td>
+                     <td>$0</td>
+                   </tr>
+                   <tr>
+                     <td>2100</td>
+                     <td>Account Payables</td>
+                     <td>Liability</td>
+                     <td>$0</td>
+                   </tr>
+                   <tr>
+                     <td><b>Profit & Loss Accounts</b></td>
+                   </tr>
+                   <tr>
+                     <td>4000</td>
+                     <td>Rent</td>
+                     <td>Expense</td>
+                     <td>$1300</td>
+                   </tr>
+                    <tr>
+                     <td>5000</td>
+                     <td>Sales</td>
+                     <td>Income</td>
+                     <td>$150000</td>
+                     <td><a href="./sales.html" class="btn btn-xs btn-primary">view</a></td>
+                   </tr>
+                   <tr>
+                     <td>6000</td>
+                     <td>Purchases</td>
+                     <td>COGS</td>
+                     <td>$45000</td>
+                   </tr>
+                   <tr>
+                     <td>5000</td>
+                     <td>Salary</td>
+                     <td>Expense</td>
+                     <td>$45000</td>
+                     
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+  <div class="toolbar-actions">
+    <button class="btn btn-default">
+      Cancel
+    </button>
+
+    <button class="btn btn-primary pull-right" id="new_ledge" onclick="hey('heyhey')">
+      Save/Add New
+    </button>
+  </div>
+</footer>
+
+<script src="./angularjs/ang_nav.js"></script>
+
+<script src="./angularjs/ang_cust_nw.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+  <script src="./renderer.js"></script>
+    <script src="./dbase/ledger_db.js"></script>
+
+
+<script src="./vendors/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    </div>
+  </body>
+</html>
